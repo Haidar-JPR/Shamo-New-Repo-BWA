@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shamo_new_app/screens/sign_in_screen.dart';
+import 'package:shamo_new_app/screens/sign_up_screen.dart';
+import 'package:shamo_new_app/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/sign-in': (context) => const SignInScreen(),
+        '/sign-up': (context) => const SignUpScreen(),
+      },
     );
   }
 }
